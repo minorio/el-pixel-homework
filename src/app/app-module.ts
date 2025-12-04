@@ -3,13 +3,17 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Heroes } from './heroes/heroes';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Heroes
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [
