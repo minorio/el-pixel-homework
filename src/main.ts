@@ -1,7 +1,7 @@
-import { platformBrowser } from '@angular/platform-browser';
-import { AppModule } from './app/app-module';
+import {bootstrapApplication, provideProtractorTestingSupport} from '@angular/platform-browser';
 
-platformBrowser().bootstrapModule(AppModule, {
-  
-})
-  .catch(err => console.error(err));
+import {AppComponent} from './app/app.component';
+
+bootstrapApplication(AppComponent, {
+  providers: [provideProtractorTestingSupport()],
+});
